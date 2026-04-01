@@ -122,7 +122,7 @@ Chroma is used as the vector database for storing and retrieving document embedd
 ### Start Backend Server
 
 ```bash
-npm run dev
+npm run start
 ```
 
 Server runs at:
