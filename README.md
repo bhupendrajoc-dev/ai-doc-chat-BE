@@ -51,16 +51,16 @@ src/
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Clone Repository
+### Clone Repository
 
 ```bash
 git clone <your-repo-url>
-cd backend
+cd <repo-name>
 ```
 
 ---
 
-### 2️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 npm install
@@ -68,7 +68,7 @@ npm install
 
 ---
 
-### 3️⃣ Install & Run Ollama
+### Install & Run Ollama
 
 Install Ollama: https://ollama.com
 
@@ -87,7 +87,39 @@ ollama serve
 
 ---
 
-### 4️⃣ Start Backend Server
+## Installing and Using Chroma
+
+Chroma is used as the vector database for storing and retrieving document embeddings. Follow the steps below to install and use Chroma:
+
+### Installation
+
+1. Install Chroma using pip:
+   ```bash
+   pip install chromadb
+   ```
+
+2. Verify the installation:
+   ```bash
+   chroma --version
+   ```
+
+### Running Chroma
+
+1. Start the Chroma server locally:
+   ```bash
+   chroma run --host localhost --port 8000
+   ```
+
+2. Ensure the server is running by visiting `http://localhost:8000` in your browser.
+
+---
+
+### Configuration
+
+- The backend connects to Chroma using the default URL `http://localhost:8000`.
+- You can modify the URL in the environment variables or directly in the code if needed.
+
+### Start Backend Server
 
 ```bash
 npm run dev
@@ -158,15 +190,6 @@ POST /chat
 * Ensure Ollama is running before starting backend
 * Models must be downloaded (`llama3`, `nomic-embed-text`)
 * For large PDFs, processing may take time
-
----
-
-## 🎯 Future Improvements
-
-* Multi-document support
-* Persistent vector database (Chroma)
-* Streaming responses
-* Authentication & user sessions
 
 ---
 
