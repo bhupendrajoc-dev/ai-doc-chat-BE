@@ -166,10 +166,6 @@ POST /chat
 ```json
 {
   "answer": "AWS Lambda is a serverless compute service...",
-  "sources": [
-    { "page": 1 },
-    { "page": 3 }
-  ]
 }
 ```
 
